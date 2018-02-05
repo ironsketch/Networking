@@ -1,0 +1,4 @@
+Michelle Bergin and Rosemary Davies
+We were succesfully able to chat with each other in NC 
+We were succesfully able to create our TCP server  and connect
+We were fairly succesfull in editing the Netcat template but were not able to succesfully connect from afar

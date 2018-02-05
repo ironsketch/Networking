@@ -1,0 +1,89 @@
+Michelle Bergin
+Lab 3
+DNS
+
+1)
+	addy: go4hosting.in (india)
+		nslookup -type=A go4hosting.in
+		
+		Name:	go4hosting.in
+		Address: 111.118.176.8
+
+2)
+	nslookup -type=NS cam.ac.uk
+	
+		Authoritative answers can be found from:
+		sns-pb.isc.org	internet address = 192.5.4.1
+		sns-pb.isc.org	has AAAA address 2001:500:2e::1
+		dns0.eng.cam.ac.uk	internet address = 129.169.8.8
+		authdns0.csx.cam.ac.uk	internet address = 131.111.8.37
+		authdns0.csx.cam.ac.uk	has AAAA address 2001:630:212:8::d:a0
+		ns2.ic.ac.uk	internet address = 155.198.142.82
+		ns2.ic.ac.uk	has AAAA address 2001:630:12:600:1::82
+
+3)
+	nslookup -type=MX yahoo.com 10.12.1.10
+
+		Non-authoritative answer:
+		yahoo.com	mail exchanger = 1 mta7.am0.yahoodns.net.
+		yahoo.com	mail exchanger = 1 mta5.am0.yahoodns.net.
+		yahoo.com	mail exchanger = 1 mta6.am0.yahoodns.net.
+
+		Authoritative answers can be found from:
+		mta7.am0.yahoodns.net	internet address = 98.136.216.25
+		mta7.am0.yahoodns.net	internet address = 66.196.118.36
+		mta7.am0.yahoodns.net	internet address = 98.138.112.32
+		mta7.am0.yahoodns.net	internet address = 98.138.112.33
+		mta7.am0.yahoodns.net	internet address = 98.136.217.203
+		mta7.am0.yahoodns.net	internet address = 98.138.112.34
+		mta7.am0.yahoodns.net	internet address = 98.138.112.38
+		mta7.am0.yahoodns.net	internet address = 66.196.118.35
+		mta5.am0.yahoodns.net	internet address = 66.196.118.33
+		mta5.am0.yahoodns.net	internet address = 66.196.118.37
+		mta5.am0.yahoodns.net	internet address = 63.250.192.46
+		mta5.am0.yahoodns.net	internet address = 98.138.112.37
+		mta5.am0.yahoodns.net	internet address = 98.138.112.38
+		mta5.am0.yahoodns.net	internet address = 98.138.112.32
+		mta5.am0.yahoodns.net	internet address = 98.136.217.203
+		mta5.am0.yahoodns.net	internet address = 98.138.112.35
+
+4)
+	All DNS are using UDP.
+
+5)
+	If it's responding it's sending through 53, if it is recieving it is recieving over 53. All other ports are random. (maybe not random, maybe each server/ system handles it differently. maybe per application port)
+
+6)
+	10.12.1.10 it's the same address.
+
+7)
+	I think 'type' is query and specific is A name. The answer was CNAME and A
+
+8)
+	2 answers were provided. The first is a call to a CNAME ianawww.vip.icann.org (not to be confused with icanhascheezburger) Typically www. is an A name record so it makes sense that it was some weird ianawww
+
+	The second was an a record request from the CNAME request I believe.
+9) 
+	If I found the right SYN message then it was my IP address.
+
+10)
+	It's so convoluted it's hard to see. I have 100's of messages. But from what I can see, (I ordered the messages by time) there is no DNS message sent between website file and image file.
+
+11) 
+	Query destination port: 53
+	Source port of response: 53
+
+12)
+	It's sent the the DNS server my computer has been using Destination: 10.12.1.10
+	Source for response ip: the same
+
+13)
+	Sent for a type A and got in return CNAMEs and A names
+
+14) 
+	3 answers are sent:
+	1) www.mit.edu: type CNAME, class IN, cname www.mit.edu.edgekey.net
+	2) www.mit.edu.edgekey.net: type CNAME, class IN, cname e9566.dscb.akamaiedge.net
+	3) e9566.dscb.akamaiedge.net: type A, class IN, addr 23.41.252.65
+
+I tried the rest got time outs. I can get to it later but I get the idea. (i hope!)

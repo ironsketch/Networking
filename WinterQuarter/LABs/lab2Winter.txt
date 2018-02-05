@@ -1,0 +1,9 @@
+Network
+Lab2
+Michelle Bergin
+
+We did another SSH Inception. This time it was Total Recall.
+This one was a lot more fun to run through. I felt it had a good flow where I could learn more command line tools and not feel stuck.
+
+I enjoyed this lab and the most I learned was about using nc to find a port used by narrowing down the possibilities.
+I also learned about nmaping a range of IPs. I need more practice and I would like to finish Total Recall. The server was shut down accidentally.

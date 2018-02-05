@@ -1,0 +1,85 @@
+Networking
+HW3
+Michelle Bergin
+
+CH2: R21-22, R25-26, P18-20, P22, P25, P29-31
+
+R21)
+	Transfering a file through P2P is going from user to 'user'(client) and not from user to client(server) to user.
+
+R22)
+	P2P offers a way for a new user to still start downloading a file. And then she will then help others download it as she is downloading it. If she has a good connection, that will help increase here connections to make the download faster.
+
+R25)
+	CDN, Content Distribution Networks help relieve stress by offering content cached closer to users. They can hold often downloaded or based on algorithims, possibly popular content. 
+
+R26)
+	
+
+P18)
+	a) Whois - domains have a lot of information on them. Who registered it, DNS records and the registrar. Doing a whois search can pull this informtion up.
+	b) I searched my domain, artmew.com
+	Nameserver: NS1.DYNADOT.COM
+	Nameserver: NS2.DYNADOT.COM
+	I used GoDaddy.com's whois who got the info from my registrar, whois.dynadot.com
+	c) my domain only has an a record but other wise both found the same info.
+	d) Yes evergreen has many ips. I read about subnets (I am still confused) but it seems a way to filter inforation more effectively. But you can have thousands of ip addresses. I also heard that depending on how it is set up, my connected IP address can change daily.
+	e) 199.167.72.0/21
+	f) It not only provides information where you store your mail and hosting but also your actual home address unless you provide privacy. Also your email is stored there too.
+	g) It's good to know who owns what. That way if someone had innapropriate content, they could be contacted. Although you don't have to keep correct information. (Registrars will remind you to make sure it is correct) But they do not verify the data.
+
+P19)
+	a) ; <<>> DiG 9.8.3-P1 <<>> @l.root-servers.net evergreen.edu
+	; (1 server found)
+	;; global options: +cmd
+	;; Got answer:
+	;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28225
+	;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 6, ADDITIONAL: 7
+	;; WARNING: recursion requested but not available
+	
+	;; QUESTION SECTION:
+	;evergreen.edu.			IN	A
+	
+	;; AUTHORITY SECTION:
+	edu.			172800	IN	NS	a.edu-servers.net.
+	edu.			172800	IN	NS	c.edu-servers.net.
+	edu.			172800	IN	NS	d.edu-servers.net.
+	edu.			172800	IN	NS	f.edu-servers.net.
+	edu.			172800	IN	NS	g.edu-servers.net.
+	edu.			172800	IN	NS	l.edu-servers.net.
+	
+	;; ADDITIONAL SECTION:
+	a.edu-servers.net.	172800	IN	A	192.5.6.30
+	c.edu-servers.net.	172800	IN	A	192.26.92.30
+	d.edu-servers.net.	172800	IN	A	192.31.80.30
+	f.edu-servers.net.	172800	IN	A	192.35.51.30
+	g.edu-servers.net.	172800	IN	A	192.42.93.30
+	l.edu-servers.net.	172800	IN	A	192.41.162.30
+	g.edu-servers.net.	172800	IN	AAAA	2001:503:cc2c::2:36
+	
+	;; Query time: 38 msec
+	;; SERVER: 199.7.83.42#53(199.7.83.42)
+	;; WHEN: Fri Oct 20 18:54:33 2017
+	;; MSG SIZE  rcvd: 266
+
+P20)
+	
+
+P22)
+
+P25)
+
+P29)
+	Chrome has a max parallel TCP connections of 10 (as of a post in 2015) With parallel connections you can download more stuff faster. It can also help with P2P since you are often downloading and uploading at the same time to different peers.
+
+	Conversly if you have multiple connections to one server, you are putting more weight on that server. Also each connection shares the total link transfere rate.
+
+P30)
+	I had to research this because the book doesn't explain this. So TCP sends a stream of bytes and UDP sends bytes with message end and beginnings. So UDP will send FOO and then BAR. Then (hopefully) the user will recieve FOO then BAR. TCP on the other hand sends byte streams so it could get FOO then BAR or FOOBAR or F then OO then BAR. 
+
+	Advantage might be if you are recieving them in order (as TCP does) that you can start showing these things right away as they load the rest. 
+	Disadvantage could be that if you are using TCP to watch a movie you don't know how long till the next chunk and you are set waiting. Whereas UDP you know how much more to show?
+	
+
+P31)
+	Netflix offers free CDN's to network providers. It uses algorithims based on what people are likely to watch and what they are watching most often to load it's CDN's. Some CDN's are smaller so netflix will only put popular movies on them. Otherwise if a CDN is big enough it will also allow for location caching. In other words, if a specific location happens to watch one movie more than another then it will be cached in that location's CDN.

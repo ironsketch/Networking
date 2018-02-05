@@ -1,0 +1,63 @@
+Michelle Bergin
+LAB3
+Networking
+
+      __   __    / ___  __   __  
+|  | |  \ |__)  /   |  /  ` |__) 
+\__/ |__/ |    /    |  \__, |   
+
+What I learned:
+	I saw the packets of UDP and TCP broken up. I saw that there are A LOT of packets! I saw how to find TCP information from a HTTP POST in wireshark.
+
+What I did:
+
+#############
+#			#
+#  	 UDP    #
+#			#
+#############
+
+1)
+	5 then data
+	Source Port:, Destination Port:, Length:, Checksum:, Checksum Status:, Stream index:
+
+2)
+	305 bytes
+
+3)
+	305
+5)
+	65535
+
+6)
+	17, 17 31 37
+
+7)
+	The destination port of sending is the source of the other and visaversa.
+
+#############
+#			#
+#    TCP    #
+#			#
+#############
+
+1)
+	Source: 10.20.76.51
+
+2)
+	Destination: 128.119.245.12 and on ports:
+	Source Port: 53295
+	Destination Port: 80
+
+3)
+	10.20.76.51
+
+4)
+	0, That it's the zeroth and flag 0x002?
+
+5)
+	0, with acknowledgement 1. 
+
+6)
+	Sequence number: 151808    (relative sequence number)
+

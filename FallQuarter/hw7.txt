@@ -1,0 +1,34 @@
+Networking
+HW7
+Michelle Bergin
+
+R7-9, R11, R16-17, R21-22, P1-2, P5-6, P12, P22
+
+R7) Forwarding table
+
+R8) Destination-based forwarding and Generalized forwarding have lots of similarities but Generalized also watches the header fields which it can manipulate, counters  and actions to be taken
+
+R9) Routing in a traditional destination-based forwarding is based off of the appx the last 8 bits of the ip address in binary
+
+R11) The packet schedular decides which packets can be sent next. It may be on importance or along a FIFO way.
+
+R16) Round Robin and Weighted Queueing. Round Robin will go through each input and send each once as it goes through them. Weighted is based on importance of the packet. These would be the same if the importance is all equal.
+
+R17) The upper layer protocol of the header
+
+R21) I am confused. You can have many ip's depending on what you get from your ISP. I think you can set up your router to handle those IP's...? 
+
+R22) 11001010 00000011 00001110 00011001
+
+P1) 
+
+P2)
+
+P5)
+
+P6)
+
+P12)
+
+P22)
+

@@ -1,0 +1,45 @@
+Michelle Bergin
+Networking
+Lab5
+
+1) UDP
+2) 	Frame 2, Source:68, Port:67, StreamIndex: 0
+		DHCP Request
+	Frame 7, Source:67, Port:68, StreamIndex: 1
+		DHCP Discover
+	Frame 936, Source:68, Port:67, StreamIndex: 0
+		DHCP Offer
+	Frame 941, Source:67, Port:68, StreamIndex: 1
+		DHCP ACK
+
+My Wireshark crashes often so these numbers have changed ^
+
+3) I am using a4:5e:60:df:24:89
+
+4) Request has no IP addresses yet and has a section to request many things:
+	Parameter Request List Item: (1) Subnet Mask
+	Parameter Request List Item: (121) Classless Static Route
+	Parameter Request List Item: (3) Router
+	etc...
+
+5) 	Transaction ID: 0xc09e3f32
+	Transaction ID: 0xc09e3f33
+	To keep track of requests?
+
+6) 	DHCP server identifier
+	10.12.1.1src, 10.20.76.13dst
+
+7) 10.12.1.1
+
+8) 10.20.76.13
+
+9) 	Yes there is a relay agent: 10.20.76.1
+	For the lab screen shot, their relay agent is 0.0.0.0 indicating no relay agent
+
+10) From what I learned a subnet mask is used to help disperse IP's based on location? and it looks like the router is the relay agent. Used for controlling ip flow? 
+
+11) ACK accepts the IP address
+
+12) I keep my IP for 90 days. Since each computer needs one, but most students aren't here for more than the quarter, it's good to refresh that pool of ip's. That way there are IP's to go around.
+
+13) my wireshark kept crashing...

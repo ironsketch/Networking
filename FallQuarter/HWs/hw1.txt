@@ -1,0 +1,94 @@
+Networking
+HW1
+Michelle Bergin
+
+R1
+	End systems = hosts and are connected through a network of communication links and packet switches. Types of end systems, phone, computer, smart toaster, server. Yes a Web server is an end system.
+
+R4
+	1. Home Access: DSL
+	2. Home Access: FTTH
+	3. Home Access: Satellite
+	4. Enterprise Access: LAN
+	5. Enterprise Access: WiFi
+	6. Wide-Area Access: 3G and LTE
+
+R5
+	If they have their own fiberoptic line then they are not shared and little collision. But There is always collision at some point. Even at the router to a home.
+
+R9
+	FTTH is not shared and the best and ranges from 51.8 Mbps to 39.8 Gbps
+	HFC is shared past the fiberoptic 42.8 Mbps and upstream rates of up to 30.7 Mbps
+	DSL is shared 50 kHz to 1 MHz band
+
+R11
+	Packet transfer time takes L/R, Lbits over transmission rate. If there are 2 R's then it should take L/R(1) + L/R(2)
+
+R12
+	I could see a benefit to circuit switching is when you have something that HAS to have an alotted time and resource use. As an example, a friend of mine I had was a scientist and had 1000's of dollars invested in expirements that couldn't ever be shut off due to this or that. She allowed overdrafts in her account (and paid the much higher fees) in order to maintain her expirements. 
+
+	With TDM each circuit gets all the bandwidth, with FDM it only gets a fraction of the bandwidth. 
+
+R13
+	a) 2 users can be supported. 2Mbps(rate)/1Mbps(sent)
+	b) The bandwidth can support 2 users because it is under the bandwidth  of 2Mbps when they each send 1Mbps. When you add a third there is now more data then bandwidth and things will be queued
+	c) 20% precent, .2
+	d) .2 * .2 * .2 = .008
+
+P4
+	a) There are 4 switches with 4 connections from each. The maximum number of connections made is 16. (Did in my head from looking at the image)
+	b) The maximum amount of simultanious connections between A and C, since it moves in clockwise direction is 8. 	
+	c) Yes, the inner connections can be used and the outer connections at the same time. So A - C could use then inner and B - D can use the outer. Or visaversa.
+
+P6
+	a) d(prop) is distance/propagationSpeed so it is m/s
+	b) The link has a transmission rate of Rbps and the packet we are sending is L bits of size. So L/R sec is how we find the time of transmission delay.
+	c) All you did is add all the wait times up! So, m/s + L/R
+	d) Transmission is how long it takes to push out the bits from the starting host to the link. So at t = d(trans) the last bit has been pushed onto the link.
+	e) The d(prop) is how long it takes a bit to complete it's journey to the next router. So the first bit will be at the beginning of the first packet at time t = d(trans).
+	f) If propagation delay is less than transmission delay my assumption is that it takes less time to run the link than to push out of the first host. So the first bit is in the end host.
+	g) d(trans) = L/R and d(prop) = m/s so
+		L   m    s * L         2.5*10^8 * 120
+		- = - ,  ----- = m  ,  -------------- = m  , 535.714 Km or 535714.29 m
+		R   s      R                 56
+
+P18
+	This is funny, I had internet problems so I was about to do a trace route anyways : D I used to do these a lot when I worked at GoDaddy.com.	
+	Traceroute times = 2:27PM, 6:12PM, 8:30PM
+	a) 
+		2:27PM 
+			Average = 27.41645
+			SD = 30.497882446836
+		6:12PM
+			Average = 24.4080975609756
+			SD = 14.5177839920645
+		8:30PM
+			Average = 29.3375277777778
+			SD = 26.5664104231384
+	b) 
+		2:27PM = 31 different IP's
+		6:12PM = 30 different IP's
+		8:30PM = 27 different IP's
+		It appears that each Traceroute had to hit less routers
+	c) There is high latency near the first few hops which I have read is usually to do with the local network. And at one point my modem was not being nice and had a latency of 43 ms at one point and 170 at another! But the traceroute where my modem had 170 ms latency is also when my roomate is home and probably using the internet too.
+	d) I did a traceroute to pixiv.net, a Japanese drawing forum similar to a fancy BBS drawing board. The traceroute for this was in the 100's of ms where as wit my other traceroute (to evergreen.edu) was only averaging 27.05.
+
+ --------------
+| Extra Credit |
+ --------------
+
+P8
+	
+
+P16
+	
+
+P19
+	
+
+P22
+	
+
+P31
+	
+

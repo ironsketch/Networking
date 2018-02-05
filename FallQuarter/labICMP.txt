@@ -1,0 +1,19 @@
+Michelle Bergin
+Lab ICMP
+
+ping intmain.in
+
+1) 	my host 10.20.76.40
+	destination host 198.71.233.214
+2) 	Because it does not use ports. It is only sending to touch the other server and get a response, it doesn't need to access anything else.
+3)	Type is either 8 or 0 for request or reply
+	Code is always 0
+	Checksum, Identifier, Sequence number, Request frame, Response time, time stamp from icmp data and relative, data 48bytes
+	length is 98 so all the rest has to be within 48 bytes
+4)	Same as above
+5) 	Host and dest host are the same. 
+6)	It would be 17
+7)	it only has a lot more fields vs before
+8)	IP protocol and the user datagram
+9) 	Wire shark keeps crashing.
+10) This I am confused about

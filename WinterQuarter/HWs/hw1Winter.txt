@@ -1,0 +1,95 @@
+Ntworking
+HW7
+Michelle Bergin
+
+R7-9, R11, R16-17, R21-22, P1-2, P5-6, P12, P22
+Ch5: R5-6, R8, R11, R14, R19-20, R22
+
+R7) Forwarding table
+
+R8) Destination-based forwarding and Generalized forwarding have lots of similarities but Generalized also watches the header fields which it can manipulate, counters  and actions to be taken
+
+R9) Routing in a traditional destination-based forwarding is based off of the appx the last 8 bits of the ip address in binary
+
+R11) The packet schedular decides which packets can be sent next. It may be on importance or along a FIFO way.
+
+R16) Round Robin and Weighted Queueing. Round Robin will go through each input and send each once as it goes through them. Weighted is based on importance of the packet. These would be the same if the importance is all equal.
+
+R17) The upper layer protocol of the header
+
+R21) I am confused. You can have many ip's depending on what you get from your ISP. I think you can set up your router to handle those IP's...? 
+
+R22) 11001010 00000011 00001110 00011001
+
+P5)
+a)		11100000 00000000	0
+		11100000 00000001	1
+		11100000 0000001	2
+		11100001			2
+		then all others		3
+b) Based on longest matching
+	1) 3
+	2) 0
+	3) 2
+
+P6) 
+	00000000 00000000 00000000 00000000
+				through
+	00111111 11111111 11111111 11111111
+
+	01000000 00000000 00000000 00000000
+				through
+	01111111 11111111 11111111 11111111
+
+	10000000 00000000 00000000 00000000
+				through
+	10011111 11111111 11111111 11111111
+
+P12)
+	214.97.254/23
+	A - 223.1.1 (250)
+	B - 223.1.3 (120)
+	C - 223.1.2 (120)
+	D - 223.1.7
+	E - 223.1.8
+	F - 223.1.9
+Help
+
+P22)
+Help
+
+Ch5: R5-6, R8, R11, R14, R19-20, R22
+
+R5)
+When you are using dijkstra's algorithm it's when a stop is farther than 1 at that step?
+
+R6)
+It's carried out in a recursive, distributed manner by routers.
+
+R8)
+False.
+Each router creates a graph of it's entire AS. Then it uses Dijkstra's algorithm to calculate shortest path to all subnets. In OSPF the link info is sent to ALL routers.
+
+R11)
+AS-PATH is used within Autonomous Systems and NEXT-HOP is used inbetween each AS
+
+R14)
+From what I gather, the control pane is about monitoring best routes to compensate for many errors, like high traffic or a downed or erroring router. In an SDN the main controller keeps track of what's going on as a whole and updates routers rather then all routers handling this alone. The main beinifit that I thought i read was that it can help cover any discrepancies in hardware.
+For the communication layer, the SDN controller uses a protocol called OpenFlow
+The Network-Wide State Management layer is about status of all the routers. These are kept in tables and the main controller has the up to date info.
+
+
+R19)
+0 0 echo reply
+8 0 echo request
+4 0 source quench (rarely used)
+3 3 destination port unreachable (used to tell a traceroute to stop sending UDP segments)
+
+R20)
+3 3 (stated above)
+11 0 (sends type of router reached and ip) ttl expired
+
+R22)
+SNMP
+GetRequest? Get a value of an MIB (an MIB is a piece of info, like number of UDP requests to the host or software versions etc)
+SetRequest? Update or set a value to an MIB

@@ -1,0 +1,86 @@
+Networking
+HW6
+Michelle Bergin
+Ch3: P27, P29, P31, P40, P42, P43, P46, P50
+
+P27) Host A has already sent all bytes through byte 126. Which Host B has recieved
+	Host A then sends two more segments back-to-back
+	1 = 80 bytes, 2 = 40 bytes
+	first segment sequence number was 127 port 302 destport 80
+	Is it saying that the sequence numbers start at 127?
+	So...:?
+	
+	Host B seq=127 ->
+	s=304, d=80
+							<- seq=253 Host A
+								s=80, d=304
+	Host B seq=254 ->
+	s=304, d=80
+							<- seq=334 Host A
+								s=80, d=304
+							<- seq=375 Host A
+								s=80, d=304
+	a) seq = 375, s=80, d=304
+	b) Host B seq=254, s=304, d=80
+	c) seq=127
+	d) 
+	Host B seq=127 ->
+	s=308, d=80
+							<- seq=253 Host A
+							b=126, s=80, d=304
+	Host B seq=254 ->
+	s=308, d=80
+							<- seq=334 Host A
+							b=80, s=80, d=304
+							<- seq=375 Host A
+							b=40, s=80, d=304
+	Host B seq=335 ->   X
+	s=308, d=80
+							<- seq=334 Host A
+                            b=80, s=80, d=304
+                            <- seq=375 Host A
+                            b=40, s=80, d=304
+	Host B seq=376 ->
+	s=308, d=80
+
+P29) 
+	a) To protect against flood attacks? I thought the initial sequence number was randomized to make it harder for someone to highjack onto you internet flow.
+	b) I am not fully sure what this means. Maybe the hacker could intercept the packets and send their own as if they are the original server?
+	c) If the hacker has a handle on the flow I think they could do harm because they can make up the size of packets and the original host will just keep going by asking for the next byte. (sequence number)
+
+P31) 
+	 Estimated RTT
+	 (1 - .125) * 100 + .125 * 106 = 100.75
+	 .875 * 100.75 + .125 * 120 = 103.15625
+	 .875 * 103.15625 + .125 * 140 = 107.76172
+	 .875 * 107.76172 + .125 * 90 = 105.54151
+	 .875 * 105.54151 + .125 * 115 = 106.72382
+
+	 Deviates RTT
+	 (1 - .25) * 5 + .25(106 - 100) = 5.25
+	 .75 * 5.25 + .25(100.75 - 120) = 8.75
+	 .75 * 8.75 + .25(103.15625 - 140) = 15.77344
+	 .75 * 15.77344 + .25(107.76172 - 90) = 16.27051
+	 .75 * 16.27051 + .25(105.54151 - 115) = 14.5675
+
+	 Timeout Interval
+	 100.75 + 4 * 5.25 = 121.75
+	 103.15625 + 4 * 8.75 = 138.15625
+	 107.76172 + 4 * 15.77344 = 170.85548
+	 105.54151 + 4 * 16.27051 = 170.62355
+	 106.72382 + 4 * 14.5675 = 164.99382
+
+P40) 
+	a) Slow start is appx 0,0 to 6,30 and 23,0+ because of the hyperbola shape. Slow start is exponential.
+	b) about transmission round 16 and 22 when it suddenly drops by half. 
+	c) time out becuase it goes up again
+	d) triple duplicate ack because it starts to slow start again
+	e) I need help on the rest
+
+P42) It would be hard to keep timers on ALL DATA being sent. So a window is used to handle what needs to be sent at short intervals.
+
+P43) This is a hard question for me to understand. But from what I think I understand that Host A is sending a file to Host B. It's asking what would keep it from continuesly streaming data at rate Sbp. I would assume that first, there is a window used. And can only send at any time, that window's worth of data. Also it has to wait for ACKs. Also other people may be sending and recieving data so you are limited to your bandwidth and the bandwidth being used. It may take longer to get replies for that reason 
+
+P46) help
+
+P50) :(

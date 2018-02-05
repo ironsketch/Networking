@@ -1,0 +1,36 @@
+Michelle Bergin Shreyas Raman
+LAB2
+
+What we did:
+	Questions from the Wireshark lab (below at QUESTIONS::)
+	I also started on the UDPPinger. The reason this is late turning in is because I still wanted to give it a whirrl before I turned this in. But I got distracted and I forgot. I am still going to try the UDPPinger later. I will submit an addendum if I do so.
+
+What I learned:
+	I accidentally went to the first Wireshark link and so when I went to accomplish the first task it didn't capture any HTTP responses. I tried and tried and nothing changed. Eventually, finally, I got a 304 message and an HTTP request was found. My assumption is that the simple website was locally cached so that it requested the information without sending an HTTP request. I assume that eventually the cache time frame timed out and it finally sent a new call.	
+	
+	I am also learning that I love Python. Not related but I am really enjoying learning C++ and have realized that learning Java in an IDE I think took away some glamour of programming because it does so much for you. I enjoy having control over my computer. During our lab Rosemary and I talked about how to modify terminal to have a kitty in the corner. My first thought was that there is no way. But then I realized that I am a programmer and there is probably very much a way to do so :D Albeit I may not be learned enough to do it but I could! and will!
+
+QUESTIONS::
+
+1) 1.1 and 1.1
+2) 	language: en-US
+	text/html/app,xhtml,xml, image, webp, apng
+3) My computer: 10.20.76.25
+   Other server: 128.119.245.12
+4) HTTP/1.1 304 Not Modified\r\n
+5) Because I keep receiving 304 not modified it isn't sent.
+6) 305 bytes
+7) No Anything not shown is in hex and unreadable, everything else is readable and in the display window.
+8) No I do not.
+9) Yes, in the lined based text data
+10) Yes, if modified since todays date.
+11) HTTP/1.1 304 Not Modified\r\n
+	No, no HTML was explicitely sent.
+12) Only 1, 1/1
+13) 1
+14) HTTP/1.1 200 OK\r\n
+15) 4
+16) 4 128.119.245.12 and 128.119.240.90
+17) In series. First it gets the first image, then it tries the other and that image has moved so it then gets the new location image.
+18) HTTP/1.1 401 Unauthorized\r\n
+19) The login credentials not encripted

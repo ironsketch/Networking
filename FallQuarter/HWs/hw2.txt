@@ -1,0 +1,126 @@
+Networking
+Michelle Bergin
+HW2
+
+---------
+Contents
+CH1: R19
+CH2: R1, R3, R6, R7, R9, R11, R12, R14, R16, R19, P1, P3-5, P9
+---------
+
+
+CH1: 
+	R19)
+		a) traceroute.org only provides 8 links for french cities. most are broken or don't work when you get there! I finally got 2 to work. JIC those addresses are https://lg.netsample.com/index.php and http://traceroute.sdv.fr/
+		17 hits from the second site and 30 from the other. I don't see any similar hits.
+		So I decided to do two from Germany. Both only got a few hops, one to 11 and another to 7. They both seemed to now get far but they both ended up at a server called blackmesh-gw.ip4.gtt.net
+
+		b) Well I guess I just did that :D
+		c) The traceroutes did not diverge. I actually don't know when it reached china since they never gave indication but they were the same till telia.net which looks like it's Swedish. So maybe it diverges before it reaches china.
+
+CH2: 
+	R1)
+		1) Web, Hyper Text Transfer Protocol HTTP
+		2) Email, Simple Mail Transfer Protocol SMTP
+		3) Streaming, Real Time Transfer Protocol RTP
+		4) File transfers, File Transfer Protocol FTP
+		5) Remote terminal access, Telnet
+
+	R3)
+		Who ever is sending is the server. Whoever is requesting is the client. Sometimes a device can be both.
+
+	R6) HTTP has the role of communicating with servers and requesting information. Then recieving that information. (TCP) It asks if a website is up to date, sends the requested address and receives the address. But the HTTP can't survive without it's TCP (or UDP) 
+
+	R7) Gaming, esp competative gaming. You can't have any lag, and any data loss would be detrimental. People game and could win millions of dollars. So making sure that there are no errors is important. Infact competative gaming is so big you can now get a travel visa to compete.
+
+	R9) SSL is applied at the application level and used by the TCP/UDP. In order to use an SSL you need to buy one (you may be able to make your own but buying one can add you to a safe list because it is verified by companies and can even change your address bar a different color to alert users that it is safe.) But not only do you need an SSL but you have to implement it. Bad programming can render your SSL more useless. It also has it's own socket API. The website is sent clear text to this socket, which is encrypted and sent to TCP.
+
+	R11) Stateless means that it does not store any info about what has just happened. So for HTTP if I keep asking it to send info it would. No IMAP is not stateless. POP3 and SMTP are stateless.
+
+	R12) Websites keep track of users with cookies. You could just have a login, but if someone didn't log in you wouldn't know where they were without a cookie. They can be usefull in remembering logins and what you enjoy seeing, but they can be bad because where I go and what I look at, my habits, can be sold.
+
+	R14) 
+		$ telnet gaia.cs.umass.edu 80
+		Trying 128.119.245.12...
+		Connected to gaia.cs.umass.edu.
+		Escape character is '^]'.
+		GET /kurose_ross/interactive/index.php HTTP/1.1
+		Host: gaia.cs.umass.edu
+	
+		HTTP/1.1 200 OK
+		Date: Sat, 07 Oct 2017 01:02:41 GMT
+		Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3
+		X-Powered-By: PHP/5.4.16
+		Content-Length: 7097
+		Content-Type: text/html; charset=UTF-8
+
+		Couldn't get ot tp say 304. I even tried another example to no avail. I get it though and saw it on wireshark.
+
+	R16) 
+		Alices gmail account uses a webbased email. When Alice sends her email it is sent through HTTP. It then goes to her mail server which sends it via SMTP. Bob on the other end has POP3. He sets it up and as to set up POP3 via port 110. With this TCP connection it runs through 3 steps. Authorization, he logs in. The transaction phase is when he gets mail, and Alice's mail comes in.
+
+	R19)
+		MX records like CNAMEs provide an easier way to call a certain server, and a way to allow companies to alias their servers to reflect their name. Also I am assuming that since email servers are large (in quantity) that even large companies have 100's of servers (maybe thousands! Google) and accessing a specific server may be a long or confusing task. On top of that since Email is so prevalent, it's good to keep it seperate.
+
+	P1) 
+		a) False, The first response from the server holds 3 other addresses that are then sent for. So in the end a total of 4 unique messages are sent back to the client.
+		b) True because they are on the same server
+		c) False, when it is nonpersistent it is only open for each singular message.
+		d) False, the Last-Modified: header is.
+		e) False, they can for a 304 not modified
+
+	P3)
+		DNS sends a request for DNS to get IP UDP out - in
+		If not in a cache could go to root server, top TLD, to local server then return. 
+		GET to IP - TCP
+		response
+
+		An HTTP request is made through port 80 which goes through the transport layer protocol. In the HTTP request is the header informartion. This info sends the host name, the requesting URL, todays date and time. Once received the info is sent with the status of what happened. If 200, the address was found and in the message body will be the HTML file. If that file then has images, etc. those requests are sent as well. Also an HTTP request is fully sent but it can be split up at the TCP level.
+
+	P4)
+		a) at Host: we have the host name, gaia.cs.umass.edu The rest of the url is in the first line, /cs453/index.html
+		b) From the first line we can see that the browser is using HTTP 1.1
+		c) From the last two lines we see that the connection is persistent
+		d) It isn't listed
+		e) From the third line we see that Mozzila Firefox is used. This is important because I can build a website specific for each platform.
+
+	P5)
+		a) Yes it could find the document. You see that right away with the status 200 OK message on the first line. The second line provides the date and time of the successfull response
+		b) The 4th line has the last modified date and time. Sat, 10 Dec2005 18:27:46
+		c) 3874 bytes in the Content-Length: section
+		d) Yes it agreed to a time out but I noticed that each had a different time frame? or is it a keep alive status code? 
+			First 5 bytes: <titl 
+
+	P9)
+	a)	TLDR answer is 3.61099sec
+
+		L = Average object size = 850,000 bits
+		β = average request rate (also known as arrival rate) = 16 req/sec
+		R = transfer rate from LAN -> internet is 15 Mbps
+		Δ = average time over access link
+		     L
+		Δ =  -		
+			 R
+
+		   Δ
+		------    = average access delay
+		1 - Δβ
+			
+		L   .85
+		- = ----  =  Δ = .0567
+		R    15
+
+		     .0567
+		----------------  = .61099
+		1 - (.0567 * 16)
+
+		Total average time = (avg access delay + avg internet delay)
+
+						   = .61099 + 3
+             			   = 3.61099
+
+	b) .85
+	   --- = 
+	   100
+
+	weighted average .4∙A + .6∙B

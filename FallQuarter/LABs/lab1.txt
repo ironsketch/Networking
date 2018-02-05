@@ -1,0 +1,13 @@
+Networking
+Lab 1
+Michelle Bergin collaberated with Shreyas Raman
+------------------
+| What I did     |
+I downloaded and installed Wireshark on my Mac. 
+I hit the shark button and played around with what I was seeing.
+I loaded the page asked of me and observed the packets captured.
+I had a lot of questions for Shreyas who knew more of what was going on and about the raw bytes. The actual data sent in hex.
+
+------------------
+| What I learned | 
+Most interesting, I noticed that when we had to load that simple HTML file, one of the packets captured was a 404 error. I remember how those used to be used OFTEN back on 2000 or so when I first started to make websites. So I wanted to find out why. With Shreyas's help we found a favicon was trying to be loaded which throws a 403 error, so I think it's related to that since I do not see any other call to any other source. It really is interesting to think about HOW MUCH is being processed with such a simple HTML file.

@@ -1,0 +1,11 @@
+Networking
+Lab1
+Michelle Bergin
+
+Chapter 1 in Weidman:
+Installing Kali Linux was a bust. It would not work with the image given in class. I tried my best.
+So what I did was when I went home I downloaded the latest virtualbox img and ran that. It worked!
+I have been installing and going through CH1 and I am now at installing the android SDK. I am getting an error.
+What I will do this week is skip that and continue through CH2
+
+Haven't gone through CH2 yet but you posted on the website that it is mostly command line information. I'll enjoy learning more! 

@@ -1,0 +1,62 @@
+Networking
+Michelle Bergin
+HW 5
+
+Ch3: R14-16, P9, P10, P14, P19-20, P22-24
+
+R14)
+	a) False, either can piggyback data to each other. If no data is being sent then it just sends one.
+	b) False, the rwnd is dynamic and changes over time
+	c) True, since the sender waits to hear ACK of received stuff to send more.
+	d) False, the next sequence is m + size of segment
+	e) True
+	f) False, TimeoutInterval depends on DevRTT and EstimatedRTT. SampleRTT is the smoothing of those. So, TimeoutInterval will be less than 1sec.
+	g) False, from what I have understood from the book, the ACK# will be the beginning of this sequence and responded will be what's expected next.
+
+R15)
+	a) I don't see what is going on. I know it is 20 bytes but I am missing the picture in my head why. Not just the fact that you do 110 - 90. ... sorry
+	b) 90! Because it wants the first one again.
+
+R16)
+	User types 'R'
+	1) host a :: SEQ = 80 ACK 116 data = 'R'
+	2) host b :: SEQ = 116 ACK 81 data = 'R'
+	3) host a :: SEQ = 81 ACK = 152
+I know that was wrong but I am putting it how I see it. I need help.
+
+P9)
+	SENDER :: send pkt0
+	no response timer timeout
+	SENDER :: send pkt0
+	RECEIVER :: rcv pkt0
+				send ACK0
+	ACK0 lost
+	SENDER :: send pkt0
+	RECEIVER :: duplicate pkt0
+				send ACK0
+	SENDER :: rcv ACK0
+			  send pkt1
+is this correct?
+
+P10)
+	If the max delay is known you can send that to the reciever as well. That way you both know the max time to wait. Add in a timer during the Wait for ACK or NAK
+
+P14)
+	This would definitly not work. Maybe if you had a timer you could assume that nothing ever came, but your wait time would go up. Plus how would you know what was succesfully sent? You really wouldnt know so you couldnt ever resend a packet that was lost to the wind.
+
+P19)
+	Host Sends :: SEQ1 ACK0, SEQ4 ACK1, SEQ7 ACK4 etc. (I am still getting those wrong but my size is 2 bytes)
+	Client Receives :: SEq1 ACK0 and SEQ13 ACK10 
+	Client Sends :: ACK0
+	Host Sends :: SEQ4 + 5 others sequentually.
+
+Because It recieved the first ACK to what was sent it will send 6 total. So if the client responded with the 5th and not the 6th ack the host will resend the 6th segment plus 5 more.
+
+P20)
+	The headers would be the same, except (possibly, data contained within) and source IP would be different. Each would need it's own buffer. If you want to send one packet of each in a back and forth manner, who's to say that Host A doesn't send faster than the other. Each would have a time out. BECAUSE if Host B suddenly is hung up (for whatever reason) it would be waisted time to keep waiting for Host B's package. That way it will keep sending host A's packets till B is coming in again.
+
+P22)
+	
+
+P23)
+P24)

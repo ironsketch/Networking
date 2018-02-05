@@ -1,0 +1,39 @@
+Michelle Bergin
+Networking
+HW 4
+
+Ch3: R1, R3, R5-8, P1, P2
+
+R1)
+	a) It would have a send host address
+		The port number of where it is sending to.
+
+	b) It would also send the port number of the server port sending out from.
+
+	c) While it is transmitting over the network? No. If there is a checksum then that can be analyzed but I believe that would be network created?
+
+R3)
+	UDP has a two-tuple with the destination ip and port
+	TCP has a four-tuple: source IP, source port, destination port and destination IP
+
+R5)
+	With better infrastructure delays would be less, and it is more reliable. Also I read a few places how UDP is often blocked. Though Googles QUIC is trying to change all this.
+
+R6)
+	Reliable no. But if the application allows (works fine) with a certain amount of data loss then UDP is a great option. Again this goes a bit back to question R5 with the possibility of UDP being blocked by a server.
+
+R7)
+	I am sure that there is a buffer. Either if they arrived at EXACTLY the same time stamp then one is chosen by random and another sent to buffer. Or a packet is lost. Hence, UDP isn't always that reliable since there is no back and forth communication for this stuff to happen. Each UDP also houses an IP address provided by the OS to distinguish them.
+
+R8)
+	With every new connection made a new socket is made. Both will have port 80 as a destination. The application associated with this data and socket will handle it from there. But both would use port 80.
+
+P1)
+	a) Destination: 80, Source: 33000
+	b) Destination: 33000, Source: 80
+	c) Yes if it isn't blocked.
+	d) Yes if it is a persistent connection.
+
+P2)
+	For each the source would be: 80 But for each specific client the destination would reflect the port they sent from individually.
+	I don't understand the second question.

@@ -1,0 +1,14 @@
+Michelle Bergin, Basil Ryen, Rosemary Davies
+Lab 6
+
+What we did: I learned how to use PCAP to find FTP calls. Then with Rosemary's help (she's awesome) I learned how to find the RETRV and how to read what is going on for those FTP calls. She showed us how to find the data and how to download it to find the flag.
+
+flag{91e02cd2b8621d0c5197f645668c5c4}
+
+Then we installed the virtual machine with Kali Linux.
+
+We then, with Rosemary's help, we learned how to add binarys!
+
+What I learned: I learned how to install a virtual machine a lot easier than a duel boot. I learned how to count binary. And I learned how to search for files and ftp calls in wireshark.
+
+Answer: 01001111
