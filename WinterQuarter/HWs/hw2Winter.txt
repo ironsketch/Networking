@@ -1,0 +1,125 @@
+Networking
+HW2
+Michelle Bergin
+
+Ch5: P4, P8, P14 
+Ch6: R4-5, R8-12 
+
+CH5 P4) I admit I don't know what I am doing. I have listened in class. Read the book, used online tutorials and examples. I am just lost...
+	::t::				::u::				::v::               ::w::
+		  t y v u w x z    	  t y v u w x z		  t y v u w x z       t y v u w x z
+		t 0 i i i i i i		t i i i i i i i		t i i i i i i i     t i i i i i i i
+		y i i i i i i i		y i i i i i i i		y i i i i i i i     y i i i i i i i
+		v i i i i i i i		v i i i i i i i		v i i i i i i i     v i i i i i i i
+		u i i i i i i i		u i i i 0 i i i		u i i i i i i i     u i i i i i i i
+		w i i i i i i i		w i i i i i i i		w i i i i i i i     w i i i i i i i
+		x i i i i i i i		x i i i i i i i		x i i i i i i i     x i i i i i i i
+		z i i i i i i i		z i i i i i i i		z i i i i i i i     z i i i i i i i
+
+::t::
+	t -> t = 0
+	t -> y = 7
+	t -> v = 4
+	t -> u = 2
+	t -> w = 5
+	t -> x = 7
+	t -> z = 15
+
+::u::
+	u -> u = 0
+	u -> t = t
+	u -> v = 3
+	u -> w = 3
+	u -> y = 9
+	u -> x = 6
+	u -> z = 14
+
+::v::
+	v -> v = 0
+	v -> t = 4
+	v -> u = 3
+	v -> y = 8
+	v -> w = 4
+	v -> x = 3
+	v -> z = 11
+
+::w::
+	w -> w = 0
+	w -> u = 3
+	w -> v = 4
+	w -> x = 6
+	w -> t = 5
+	w -> y = 12
+	w -> z = 14
+
+::y::
+	y -> y = 0
+	y -> z = 12
+	y -> x = 6
+	y -> v = 8
+	y -> t = 7
+	y -> u = 9
+	y -> w = 12
+
+::z::
+	z -> z = 0
+	z -> y = 12
+	z -> x = 8
+	z -> w = 14
+	z -> v = 11
+	z -> t = 15
+	z -> u = 14
+
+CH5 P8)
+								 Y
+						   3  /     \  6
+							/         \
+						  X ---------- Z
+						         4
+
+::X::
+	  X Y Z		  X Y Z
+	X 0 3 4		X 0 3 4
+	Y - - -		Y 3 0 6
+	Z - - -		Z 4 6 0
+
+::Y::
+	  X Y Z		  X Y Z
+	X - - -		X 0 3 4
+	Y 3 0 6		Y 3 0 6
+	Z - - -		Z 4 6 0
+
+::Z::
+	  X Y Z		  X Y Z
+	X - - - 	X 0 3 4
+	Y - - - 	Y 3 0 6
+	Z 4 6 0		Z 4 6 0
+
+
+CH5 p14)
+	a) eBGP because it is out of the internal AS
+	b) OSPF because it is internal info but not internal within other AS
+	c) iBGP because it is within the same AS
+	d) RIP because it is internal info but not internal within other AS
+
+CH6 R4)
+	There would be a collision when they arrive at the next node. If the transmission rate and length is the same, they will arrive at the same time.
+
+CH6 R5)
+	Aloha is simple and it allows for the full frame to send.
+	Token Passing - no master node and I am not sure about the next
+
+CH6 R8)
+	Sometimes information hasn't yet reached another node. If one node only senses that 'unused' node it will start sending. Thus a collision.
+
+CH6 R9)
+	MAC 2^48, IPv4 2^32, IPv6 2^128
+
+CH6 R10)
+	NO. It sends with the MAC address which is translated by the ARP and it gets sent to the right PC. Otherwise if it was the broadcast MAC address, then yes C would get the ARP request but return the wrong MAC address where as B would send the correct one returning to question 1.
+
+CH6 R11)
+	An ARP query is sent to ensure that the frame is sent to the correct computer. Each computer has a wireless/hardware internet physical card. Each of those has a MAC address. It's like an IP address. The ARP handles translation of IP and MAC address like DNS with hostname and IP.
+
+CH6 R12)
+	NO. *pretending Aip sent* Aip wants to send to Bip. It doesn't get the MAC address of Bip which is on a different subnet. It gets the sending side of ARPs MAC address. Both sides of ARP will talk to eachother but not send share Aip's MAC addy
