@@ -1,0 +1,53 @@
+Networking
+HW4
+Michelle Bergin
+
+Ch8: R3, R5, R9-11, R14-17, P1, P8, P10, P13
+
+R3)
+	Which encryption technique? Regardless I see the answer as such: When you have a decryption method that requires a computer to process the dercryption and if you want to break the encryption takes longer than the lifetime of the universe to process it's pretty secure. Like in RSA. If you don't have that private key, it would take too long to decrypt if your e? was at least 1024 bits.
+
+R5)
+	2^n! possible mappings... 16 keys? I am lost
+
+R9)
+	A hash reduces the size of the message and makes it impossible to decrypt one for one. Also when you have only a checksum you can actually change the location of certain bits to change the message but pass the checksum.
+
+R10)
+	No. it reduces the actual size and it has a many to one relationship. So you can't break the code by finding relational simularities to normal writing. Sorry, ie, finding common letters due to percentage.
+
+R11)
+	MACs fail when it comes to digital signing.
+
+R14)
+	RSA, EAS?
+
+R15)
+	digital signiture. She can use her private key to digitally sign it since her public key is known. That way people know it is her
+
+R16)
+	A nonce tells us which step we are in a transfer. Like the three way handshake and getting a website, it will help stop 'Trudy' from prettending to be ALice if she doesn't know the sequence.
+
+R17)
+	It's based on a lot of factors and isn't ever used again, the hosts lifetime.
+
+P1)
+	uasi si m icbpcu hciimzc
+	kill him
+
+P8)
+	a) z = 72
+	   n = 91
+	b) e must be less than n and a prime is good
+	c) e = 17 then d = 17
+	d) c = m^eMODn
+	   c = 9^17MOD91
+	   c = 16677181699666569 % 91
+	   c = 81
+
+P10)
+	help
+
+P13)
+	help
+

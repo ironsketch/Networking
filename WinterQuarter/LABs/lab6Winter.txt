@@ -1,0 +1,7 @@
+Networking
+LAB 6
+Michelle Bergin
+
+I succesfully on my own time unstalled an up to date KALI linux on my VM. I also have been following the penetration book as best I can. THe kali linux that was provided during class was not good enough originally. I took it into my own hands to make it work. I am only stuck on how to correctly set up the Android system.
+
+I enjoyed using web.py and indeed did follow what David had created. It was fun to create a server and learn how session cookies work etc.

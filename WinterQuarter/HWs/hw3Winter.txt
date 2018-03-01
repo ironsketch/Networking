@@ -1,0 +1,29 @@
+Networking
+HW3
+Ch6: P14-15, P19, P21, P23, P26, P32
+
+P14)
+	a) help
+	b) All devices except switches have MAC addresses. These were given from the hardware of each.
+	c) E will send the request to the first router which sends it to the next router which sends it to B. Nothing direct.
+	d) E will get it's IP address from the DHCP service. But in order to get info from B, E will need to get the MAC address of B. But E can't get that directly It will need to go through a router. It will get the router MAC address and the router will get the MAC address of the second router and that router will get the MAC address of B. 
+
+P15)
+	a) The round ones are routers right? No it will just get switched to F if the MAC address and IP is already known.
+	b) Yes it will make the request. If the close router is now a switch it will go through the second round router.
+	c) help
+
+P19)
+	help
+
+P21)
+	help
+
+P23)
+	help
+
+P26)
+	help
+
+P32)
+	help

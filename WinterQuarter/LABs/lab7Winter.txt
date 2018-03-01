@@ -1,0 +1,5 @@
+Networking
+Lab7
+Michelle Bergin
+
+It was fun to set up my own web.py and mysql database on my mac. I succesfully installed everything and set up a db with a table. I learned how to query a field and add new fields but I was not succesfull in how to tie that in with a website yet.
