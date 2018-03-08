@@ -1,0 +1,7 @@
+Networking
+Lab 8
+Michelle Bergin
+
+Q1) SQL injection, Buffer Overflow, Integer Overflow, Python Eval, Policies, Not cleaning up memory usage, Not protecting bounds
+
+
