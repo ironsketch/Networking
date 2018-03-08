@@ -1,0 +1,20 @@
+Networking
+Lab9
+Michelle Bergin /  Rosemary Davies
+
+:::::REPY 2:::::
+
+Rosemary taught me how to do more work with r2py. I wasn't fully understanding what was going on at first.
+
+Now I get it and I have a great idea that I was trying to accomplish but failed:
+
+I was trying to get python to make a shell to append mz to the beginning of the file. My thinking was that it won't be checking for a shell. To do this I need a subprocess. And I know that r2py can use subprocesses but I couldn't figure out how to use them because there is a specific way that you are supposed to import it. :/ But if I had gotten it to work then I would have had it run:
+
+ #!/bin/bash
+ echo 'MV' | cat - look.txt > temp && mv temp look.txt
+
+ This works if I run sudo sh ./scr.sh 
+
+ I really did try, just couldn't get the first part started. I may try again later.
+
+
